@@ -1,9 +1,33 @@
-*.zip
-__pycache__/
-*.pyc
-.DS_Store
-lambda-*/.aws-sam/
-*.env
-lambda-*/twilio/
+# Lambda packages
 lambda-*/boto3/
 lambda-*/botocore/
+lambda-*/urllib3/
+lambda-*/s3transfer/
+lambda-*/twilio/
+lambda-*/requests/
+lambda-*/certifi/
+lambda-*/charset_normalizer/
+lambda-*/idna/
+lambda-*/jmespath/
+lambda-*/dateutil/
+lambda-*/six*
+lambda-*/*.dist-info/
+lambda-*/__pycache__/
+
+# ZIP files
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# OS
+.DS_Store
+*.swp
+
+# Environment
+.env
+*.env
