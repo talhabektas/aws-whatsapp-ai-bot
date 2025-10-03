@@ -10,7 +10,7 @@ Serverless, AI-powered WhatsApp chatbot built entirely with AWS services. Featur
 
 - **💬 AI Conversations**: Natural language chat powered by Claude 3 Haiku (AWS Bedrock)
 - **🎤 Voice Transcription**: Converts voice messages to text (AWS Transcribe)
-- **📸 Image Analysis**: Analyzes and describes photos (AWS Rekognition)
+- **📸 Image Analysis**: Analyzes and describes photos (AWS Recognition)
 - **⏰ Smart Reminders**: Time-based reminder system (EventBridge + DynamoDB)
 - **💾 Context Management**: Maintains conversation history for contextual responses
 
@@ -24,7 +24,7 @@ WhatsApp → Twilio → API Gateway → Lambda Functions
             DynamoDB                    S3                  Bedrock
         (Chat/Reminders)              (Media)             (Claude AI)
                 ↓                       ↓                       ↓
-            Transcribe              Rekognition           EventBridge
+            Transcribe              Recognition           EventBridge
 ```
 
 ### AWS Services Used
@@ -37,7 +37,7 @@ WhatsApp → Twilio → API Gateway → Lambda Functions
 | **S3** | Media file storage |
 | **Bedrock** | Claude AI for natural language processing |
 | **Transcribe** | Speech-to-text conversion |
-| **Rekognition** | Computer vision for image analysis |
+| **Recognition** | Computer vision for image analysis |
 | **EventBridge** | Scheduler for timed reminders |
 
 ## 💰 Cost
@@ -47,7 +47,7 @@ WhatsApp → Twilio → API Gateway → Lambda Functions
 - DynamoDB: 25 GB storage
 - S3: 5 GB storage
 - Transcribe: 60 minutes/month
-- Rekognition: 5,000 images/month
+- Recognition: 5,000 images/month
 
 Estimated monthly cost after free tier: **< $5** for moderate usage
 
@@ -69,7 +69,7 @@ cd aws-whatsapp-ai-bot
 
 #### 2. Create IAM Role
 - Go to AWS IAM → Roles → Create role
-- Add policies: Lambda, DynamoDB, S3, Bedrock, Transcribe, Rekognition
+- Add policies: Lambda, DynamoDB, S3, Bedrock, Transcribe, Recognition
 - Name: `WhatsAppBotLambdaRole`
 
 #### 3. Create DynamoDB Tables
@@ -178,7 +178,7 @@ Bot: 🔔 Hatırlatma: toplantı
 
 - **Language**: Python 3.11
 - **Infrastructure**: AWS Lambda (Serverless)
-- **AI/ML**: Amazon Bedrock (Claude 3 Haiku), Transcribe, Rekognition
+- **AI/ML**: Amazon Bedrock (Claude 3 Haiku), Transcribe, Recognition
 - **Database**: DynamoDB (NoSQL)
 - **Storage**: S3
 - **API**: Twilio WhatsApp, API Gateway
