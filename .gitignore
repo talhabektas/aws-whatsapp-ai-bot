@@ -31,3 +31,7 @@ __pycache__/
 # Environment
 .env
 *.env
+
+# Policy files with account IDs
+*-policy.json
+trust-policy.json
